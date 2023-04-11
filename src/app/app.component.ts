@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pw3-vende-bisc';
-  pedido = 1;
+  pedido = 0;
 }

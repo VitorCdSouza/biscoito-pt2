@@ -1,3 +1,39 @@
-<button (click)="pedido = 1"></button>
+<div class="container">
+  <button (click)="pedido = 1">Individual</button>
+  <button (click)="pedido = 2">Casal</button>
+  <button (click)="pedido = 3">Amigos</button>
+  <button (click)="pedido = 4">Familia</button>
 
-<app-biscoito></app-biscoito>
+  <div [ngSwitch]="pedido">
+    <div *ngSwitchCase="1">
+      <p>Preço: 4,40</p>
+      <br>
+      <app-biscoito></app-biscoito>
+    </div>
+    <div *ngSwitchCase="2">
+      <p>Preço: 8,40</p>
+      <br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito>
+    </div>
+    <div *ngSwitchCase="3">
+      <p>Preço: 12,00</p>
+      <br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito><br>
+    </div>
+    <div *ngSwitchCase="4">
+      <p>Preço: 15,00</p>
+      <br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito><br>
+      <app-biscoito></app-biscoito><br>
+    </div>
+    <div *ngSwitchDefault></div>
+  </div>
+
+
+</div>
+
